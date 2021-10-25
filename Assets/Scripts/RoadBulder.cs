@@ -58,22 +58,20 @@ public class RoadBulder : ObjectSpawner, IRotator, IUnseen, IVisible
     public void SetUnseenObj()
     {
         GameObject carChild = GetCar();
-        carChild.gameObject.SetActive(false);     
+        carChild.gameObject.SetActive(false);
     }
 
     private void SetDefaultRoad()
     {
         GameObject roadChild = _currentRoad.GetChild(1).GetChild(0).gameObject;
-        roadChild.gameObject.SetActive(true);
+        roadChild.gameObject.SetActive(true);     
     }
 
     public void SetVisibleObjects()
     {
-        int randomChild = Random.Range(0, 3);
+        int randomChild = Random.Range(1, 4);
         SetRoad(randomChild);
         SetCar(randomChild);
-        GameObject roadSideWalk = _currentRoad.GetChild(1).GetChild(0).GetChild(0).gameObject;
-        roadSideWalk.gameObject.SetActive(true);
     }
 
     private void SetCar(int randomChild)
@@ -81,7 +79,7 @@ public class RoadBulder : ObjectSpawner, IRotator, IUnseen, IVisible
         GameObject carChild = GetCar();
         carChild.gameObject.SetActive(true);
 
-        carChild = _currentRoad.GetChild(0).GetChild(randomChild).gameObject;
+        carChild = _currentRoad.GetChild(1).GetChild(randomChild).gameObject;
         carChild.gameObject.SetActive(true);
     }
 
