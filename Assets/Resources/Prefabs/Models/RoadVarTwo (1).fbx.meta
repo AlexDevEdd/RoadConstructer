@@ -3,7 +3,22 @@ guid: 41874c2aa62b1114a8999cf420926a6d
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bord
+    second: {fileID: 2100000, guid: 179980f3b9e405040855e052e56c356f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: road
+    second: {fileID: 2100000, guid: fe14388f7fca5d247bb92e6fcd5b29a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: road_var
+    second: {fileID: 2100000, guid: d93bcf517a48e134882c693d3e921077, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

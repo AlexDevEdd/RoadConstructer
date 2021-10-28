@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4506290113326079236}
-  - component: {fileID: 4506290113326079237}
+  - component: {fileID: 7692337010183176578}
   m_Layer: 0
   m_Name: RoadBuilder
   m_TagString: Road
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4506290113326079237
+--- !u!114 &7692337010183176578
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,15 +40,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4506290113326079234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af0fb8a7116671a479c871fbef44646a, type: 3}
+  m_Script: {fileID: 11500000, guid: e43a2f9903061b7408b805cf6b603828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _roadObj: {fileID: 127797617143369324, guid: 5841815045b20d5409f4f4240c224be3, type: 3}
+  _roadObj: {fileID: 127797617143369324, guid: 7e9518eda81e20d41abdd3705a58987a, type: 3}
   _currentRoad: {fileID: 0}
   _ground: {fileID: 0}
   _myCamera: {fileID: 0}
   scoreDefault: 10
   scoreIncrease: 20
   rayStartPoint: {fileID: 7966947145849614854, guid: 56887269d6d59474db0cf72324ac56f6, type: 3}
-  _house: {fileID: 0}
-  IsDefaultCollider: 1
+  IsDefaultCollider: 0

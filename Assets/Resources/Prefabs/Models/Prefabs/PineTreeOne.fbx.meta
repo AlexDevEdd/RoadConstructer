@@ -3,7 +3,17 @@ guid: 349b6bbbdb57d3041ae27b4a9ab63426
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: crona1
+    second: {fileID: 2100000, guid: 9d548382663a1e54c9be6424a8ae8aa0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stvol
+    second: {fileID: 2100000, guid: 277d79ce0eb8bd944853a11a2806b047, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

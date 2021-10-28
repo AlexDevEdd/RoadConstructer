@@ -7,13 +7,15 @@ public class HouseTrigger : MonoBehaviour
     [SerializeField] private Material _winColor;
     [SerializeField] private Material _roadColor;
     [SerializeField] private Material _roadVarColor;
-
+   
     private Material[] _currentColor;
     private House[] _houseChild;
     
     public bool IsTriggerLose = false;
     public bool IsTriggerWin = false;
-
+    private Color tempColor;
+    private Color tempColor2;
+  
     private void Start()
     {
         _currentColor = gameObject.GetComponentInChildren<MeshRenderer>().materials;
