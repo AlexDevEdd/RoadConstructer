@@ -3,7 +3,22 @@ guid: c0f2552cfb8400944aef54a57fad37dc
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.017
+    second: {fileID: 2100000, guid: 1b4df48c8fcd38645ad27772ba920985, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: okno
+    second: {fileID: 2100000, guid: 84fccefbf71b5d9489627eb1ca40870a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roof
+    second: {fileID: 2100000, guid: 3d4626e83bab4b045804e7354b898909, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

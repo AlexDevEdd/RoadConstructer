@@ -1,6 +1,5 @@
 using Assets.Scripts.Interfaces;
 using DG.Tweening;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -52,28 +51,26 @@ public class RoadBulder : ObjectSpawner, IRotator, IUnseen, IVisible
     public void Rotate()
     {
         transform.rotation = Quaternion.Euler(0, 0, 0);
-        Tween tween = transform.DORotate(new Vector3(0, 360, 0), 2.5f, RotateMode.LocalAxisAdd).
+        Tween tween = transform.DORotate(new Vector3(0, 360, 0), 1.5f, RotateMode.LocalAxisAdd).
             SetLoops(-1, LoopType.Restart).SetEase(Ease.Linear);
     }
     public void SetUnseenObj()
     {
         GameObject carChild = GetCar();
-        carChild.gameObject.SetActive(false);     
+        carChild.gameObject.SetActive(false);
     }
 
     private void SetDefaultRoad()
     {
         GameObject roadChild = _currentRoad.GetChild(1).GetChild(0).gameObject;
-        roadChild.gameObject.SetActive(true);
+        roadChild.gameObject.SetActive(true);     
     }
 
     public void SetVisibleObjects()
     {
-        int randomChild = Random.Range(0, 3);
+        int randomChild = Random.Range(1, 4);
         SetRoad(randomChild);
         SetCar(randomChild);
-        GameObject roadSideWalk = _currentRoad.GetChild(1).GetChild(0).GetChild(0).gameObject;
-        roadSideWalk.gameObject.SetActive(true);
     }
 
     private void SetCar(int randomChild)
@@ -81,7 +78,7 @@ public class RoadBulder : ObjectSpawner, IRotator, IUnseen, IVisible
         GameObject carChild = GetCar();
         carChild.gameObject.SetActive(true);
 
-        carChild = _currentRoad.GetChild(0).GetChild(randomChild).gameObject;
+        carChild = _currentRoad.GetChild(1).GetChild(randomChild).gameObject;
         carChild.gameObject.SetActive(true);
     }
 
@@ -108,6 +105,7 @@ public class RoadBulder : ObjectSpawner, IRotator, IUnseen, IVisible
     {
         _currentRoad.SetParent(_ground, true);
         SetVisibleObjects();
+        OnRoadBuild?.Invoke(0);
     }
     private void SetNewPointPosition()
     {
@@ -231,6 +229,7 @@ public class RoadBulder : ObjectSpawner, IRotator, IUnseen, IVisible
 
             if (collider?.tag == SCORE_COLLIDER)
             {
+                IsDefaultCollider = true;
                 DisableCollider(collider);
                 score += scoreDefault;
                 SetPointsVisible(score);
@@ -239,7 +238,7 @@ public class RoadBulder : ObjectSpawner, IRotator, IUnseen, IVisible
             if (collider?.tag == SIDE_WALK_COLLIDER)
             {
                 SetVisibleSideWalk(collider);
-                DisableCollider(collider);
+                DisableCollider(collider);               
             }
         }
     }
