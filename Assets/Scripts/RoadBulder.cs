@@ -2,6 +2,7 @@ using Assets.Scripts.Interfaces;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class RoadBulder : ObjectSpawner, IRotator, IUnseen, IVisible
 {
@@ -121,7 +122,7 @@ public class RoadBulder : ObjectSpawner, IRotator, IUnseen, IVisible
         if (_trigger.IsTriggerLose)
         {
             IsCanSpawn = true;
-            transform.DOPause();
+            transform.DOPause();           
             _myCamera.GetComponent<UIManager>().Lose();
         }
     }
@@ -131,8 +132,8 @@ public class RoadBulder : ObjectSpawner, IRotator, IUnseen, IVisible
         if (_trigger.IsTriggerWin)
         {
             IsCanSpawn = true;
-            transform.DOPause();
-            _myCamera.GetComponent<UIManager>().Win();
+            transform.DOPause();          
+            _myCamera.GetComponent<UIManager>().Win();          
         }
     }
     private void SetEnvironment()

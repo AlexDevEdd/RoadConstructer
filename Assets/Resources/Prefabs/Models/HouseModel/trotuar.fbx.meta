@@ -6,7 +6,12 @@ ModelImporter:
   - first:
       74: 1832774873307275620
     second: Cylinder.063|CameraAction
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bord.005
+    second: {fileID: 2100000, guid: daf06e3720858054f8d85581d2f0322c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
